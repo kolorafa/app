@@ -32,7 +32,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('meta') ?>
 
     <?php
-    //echo $this->AssetCompress->css('css-combined');
+    echo $this->AssetCompress->css('css-combined');
     ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
@@ -57,7 +57,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </footer>
 
     <?php
-    //echo $this->AssetCompress->script('js-combined');
+    echo $this->AssetCompress->script('js-combined');
     ?>
     <?php if (false) { ?>
     <script>

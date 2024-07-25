@@ -15,4 +15,9 @@ return [
         'onlyCli' => true,
         'optional' => true,
     ],
+    'Queue' => [],
+    'Tools' => [],
+    'IdeHelperExtra' => [],
+    'Templating' => [],
+    'AssetCompress' => [],
 ];

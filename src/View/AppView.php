@@ -23,6 +23,11 @@ use Cake\View\View;
  * Your application's default view class
  *
  * @link https://book.cakephp.org/5/en/views.html#the-app-view
+ * @property \AssetCompress\View\Helper\AssetCompressHelper $AssetCompress
+ * @property \Shim\View\Helper\ConfigureHelper $Configure
+ * @property \Tools\View\Helper\FormatHelper $Format
+ * @property \Templating\View\Helper\IconHelper $Icon
+ * @property \App\View\Helper\HtmlHelper $Html
  */
 class AppView extends View
 {
@@ -37,7 +42,9 @@ class AppView extends View
      */
     public function initialize(): void
     {
-        //$this->loadHelper('AssetCompress.AssetCompress');
-        //$this->loadHelper('Templating.Icon');
+        $this->loadHelper('AssetCompress.AssetCompress');
+        $this->loadHelper('Shim.Configure');
+        $this->loadHelper('Tools.Format');
+        $this->loadHelper('Templating.Icon');
     }
 }

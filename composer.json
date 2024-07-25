@@ -8,18 +8,23 @@
         "php": ">=8.1",
         "cakephp/cakephp": "^5.0.1",
         "cakephp/migrations": "^4.0.0",
-        "cakephp/plugin-installer": "^2.0"
+        "cakephp/plugin-installer": "^2.0",
+        "dereuromark/cakephp-ide-helper-extra": "^0.2.0",
+        "dereuromark/cakephp-queue": "^8.1",
+        "dereuromark/cakephp-shim": "^3.2",
+        "dereuromark/cakephp-templating": "^0.2.5",
+        "dereuromark/cakephp-tools": "^3.6",
+        "markstory/asset_compress": "^5.0"
     },
     "require-dev": {
         "cakephp/bake": "^3.0.0",
-        "php-collective/code-sniffer": "^0.2.6",
         "cakephp/debug_kit": "^5.0.0",
+        "dereuromark/cakephp-ide-helper": "^2.2",
         "josegonzalez/dotenv": "^4.0",
+        "php-collective/code-sniffer": "^0.2.6",
         "phpunit/phpunit": "^10.1.0"
     },
     "suggest": {
-        "dereuromark/cakephp-ide-helper": "After baking your code, this keeps your annotations in sync with the code evolving from there on for maximum IDE and PHPStan/Psalm compatibility.",
-        "markstory/asset_compress": "An asset compression plugin which provides file concatenation and a flexible filter system for preprocessing and minification.",
         "phpstan/phpstan": "PHPStan focuses on finding errors in your code without actually running it. It catches whole classes of bugs even before you write tests for the code."
     },
     "autoload": {
