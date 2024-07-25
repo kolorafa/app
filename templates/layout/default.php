@@ -30,6 +30,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css(['normalize.min', 'milligram.min', 'fonts', 'cake']) ?>
 
     <?= $this->fetch('meta') ?>
+
+    <?php
+    //echo $this->AssetCompress->css('css-combined');
+    ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
@@ -51,5 +55,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </main>
     <footer>
     </footer>
+
+    <?php
+    //echo $this->AssetCompress->script('js-combined');
+    ?>
 </body>
 </html>

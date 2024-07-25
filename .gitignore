@@ -55,3 +55,7 @@ yarn-error.log
 .env.ddev
 composer.lock
 /config/Migrations/schema-dump-default.lock
+webroot/assets/
+webroot/css/
+webroot/js/
+/package-lock.json
