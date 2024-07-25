@@ -37,5 +37,7 @@ class AppView extends View
      */
     public function initialize(): void
     {
+        //$this->loadHelper('AssetCompress.AssetCompress');
+        //$this->loadHelper('Templating.Icon');
     }
 }

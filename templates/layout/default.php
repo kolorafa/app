@@ -59,5 +59,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?php
     //echo $this->AssetCompress->script('js-combined');
     ?>
+    <?php if (false) { ?>
+    <script>
+        feather.replace();
+    </script>
+    <?php } ?>
 </body>
 </html>
