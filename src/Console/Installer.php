@@ -59,6 +59,7 @@ class Installer
 
         $rootDir = dirname(__DIR__, 2);
 
+        static::assertDatabaseEncoding($rootDir, $io);
         static::createAppLocalConfig($rootDir, $io);
         static::createWritableDirectories($rootDir, $io);
 
@@ -246,5 +247,32 @@ class Installer
             return;
         }
         $io->write('Unable to update __APP_NAME__ value.');
+    }
+
+    /**
+     * @param string $dir
+     * @param \Composer\IO\IOInterface $io
+     * @return void
+     */
+    public static function assertDatabaseEncoding(string $dir, IOInterface $io): void
+    {
+        $file = 'app.php';
+        $config = $dir . '/config/' . $file;
+        $content = file_get_contents($config);
+        /** @phpstan-ignore-next-line */
+        $content = str_replace('//\'encoding\' => \'utf8mb4\'', '\'encoding\' => \'utf8mb4\'', $content, $count);
+
+        if ($count == 0) {
+            return;
+        }
+
+        $result = file_put_contents($config, $content);
+        if ($result) {
+            $io->write('Updated DB encoding to `utf8mb4`.' . $file);
+
+            return;
+        }
+
+        $io->write('Unable to update DB encoding.');
     }
 }
